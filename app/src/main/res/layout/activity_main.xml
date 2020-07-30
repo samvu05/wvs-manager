@@ -2,83 +2,101 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_main_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/Gray"
-    android:orientation="vertical"
     tools:context=".MainActivity">
-    <ImageButton
-        android:id="@+id/btn_show_more"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:scaleType="fitCenter"
-        android:background="@drawable/done"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginBottom="10dp"
-        android:layout_marginRight="10dp"></ImageButton>
-    <TextView
-        android:id="@+id/tv_title"
-        android:background="@color/colorBlack"
-        android:text="WVS  MANAGER"
-        android:gravity="center"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        android:textColor="@color/colorWhite"
-        android:layout_width="match_parent"
-        android:layout_height="36dp"></TextView>
-    <LinearLayout
-        android:id="@+id/title_bar"
-        android:layout_below="@id/tv_title"
-        android:layout_width="match_parent"
-        android:layout_height="36dp"
-        android:background="@color/colorBlack">
-        <TextView
-            android:layout_width="0dp"
-            android:layout_weight=".3"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:text="Name"
-            android:textColor="@color/colorWhite"
-            android:textSize="16dp"></TextView>
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight=".3"
-            android:gravity="center"
-            android:text="Adress"
-            android:textColor="@color/colorWhite"
-            android:textSize="16dp"></TextView>
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight=".3"
-            android:gravity="center"
-            android:text="Type"
-            android:textColor="@color/colorWhite"
-            android:textSize="16dp"></TextView>
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight=".3"
-            android:gravity="center"
-            android:text="Status"
-            android:textColor="@color/colorWhite"
-            android:textSize="16dp"></TextView>
-    </LinearLayout>
-    <View
-        android:id="@+id/line"
-        android:layout_below="@id/title_bar"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#4BFFFFFF"></View>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rc_all_item"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:listitem="@layout/home_item"
-        android:layout_below="@id/line"></androidx.recyclerview.widget.RecyclerView>
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:background="@color/colorBlack"
+            android:gravity="center"
+            android:text="WVS MANAGER"
+            android:textColor="@color/colorWhite"
+            android:textSize="22sp"
+            android:textStyle="bold"></TextView>
+
+        <LinearLayout
+            android:id="@+id/title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:background="@color/colorBlack">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".3"
+                android:gravity="center"
+                android:text="Name"
+                android:textColor="@color/colorWhite"
+                android:textSize="16dp"></TextView>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".3"
+                android:gravity="center"
+                android:text="Adress"
+                android:textColor="@color/colorWhite"
+                android:textSize="16dp"></TextView>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".3"
+                android:gravity="center"
+                android:text="Type"
+                android:textColor="@color/colorWhite"
+                android:textSize="16dp"></TextView>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".3"
+                android:gravity="center"
+                android:text="Status"
+                android:textColor="@color/colorWhite"
+                android:textSize="16dp"></TextView>
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rc_all_item"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:itemCount="8"
+            tools:listitem="@layout/home_item"></androidx.recyclerview.widget.RecyclerView>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_add"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/btn_add_bg"
+        android:text="Add Customer"
+        android:textColor="@color/colorWhite"></Button>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_show_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/done"></com.google.android.material.floatingactionbutton.FloatingActionButton>
 
 
 </RelativeLayout>

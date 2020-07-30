@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_add"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+    tools:context=".DetailCustomerFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <Button
+        android:id="@+id/btn_edit_customer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Edit"></Button>
+
+    <EditText
+        android:id="@+id/edt_add_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ho va ten"></EditText>
+
+    <EditText
+        android:id="@+id/edt_add_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Dia chi"></EditText>
+
+    <EditText
+        android:id="@+id/edt_add_facebook"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Facebook"></EditText>
+
+    <EditText
+        android:id="@+id/edt_add_sdt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="So dien thoai"></EditText>
+
+    <RadioGroup
+        android:id="@+id/radio_kieu_vi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Vi dung 295k"></RadioButton>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Vi mini 165k"></RadioButton>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Vi mini 195k"></RadioButton>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Sale 150k"></RadioButton>
+    </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/checkbox_da_thanh_toan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Da thanh toan"></CheckBox>
+
+    <CheckBox
+        android:id="@+id/checkbox_da_may_xong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Da may xong"></CheckBox>
+
+    <CheckBox
+        android:id="@+id/checkbox_da_gui_hang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Da gui hang"></CheckBox>
+
+    <Button
+        android:id="@+id/btn_add_a_customer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Customer"></Button>
+
+</LinearLayout>
